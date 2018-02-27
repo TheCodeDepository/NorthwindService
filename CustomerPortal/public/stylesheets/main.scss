@@ -1,0 +1,180 @@
+$sidebarWidth: 250px;
+
+$sidebarMargin: ($sidebarWidth - ($sidebarWidth*2));
+
+$burgerMenuColor: #2D103F;
+$burgerMenuWidth: 50px;
+$burgerMenuhover: #7b5793;
+
+$slideBarFontC: #ffffff;
+$slideBarFontHover: #b5b5b5;
+$slideBarColor: #6D4587;
+$slideBarLiHover: #946ab0;
+$transitionTime: 0.5s;
+$sidebarWidth: 250px;
+
+$overlayColor: black;
+$overlayOpacity: 0.6;
+
+$pageContentFontC: white;
+$pageContentPadding: 20px;
+$pageBackground: url('/images/background3.svg');
+
+body
+{
+    overflow:hidden;
+}
+#wrapper.toggled {
+
+    #sidebar {
+        width: $sidebarWidth;
+    }
+
+    #fadeOverlay {
+        background-color: $overlayColor;
+        opacity: $overlayOpacity;
+        visibility: visible;
+    }
+}
+
+#wrapper {
+    @extend #transition;
+}
+
+
+
+#page-content {
+    background: $pageBackground;
+    background-size: cover;
+    position: absolute;
+    left: $burgerMenuWidth;
+    width: auto;
+    height: auto;
+    bottom: 0px;
+    right: 0px;
+    top: 0px;
+    padding: 20px;
+    @extend #transition;
+  
+  .panel {
+  height: 100%;  
+  }
+  
+  .pageWrapper {
+    width: 100%;
+    height: 100%;
+    
+    .panel-body {
+  
+    }
+  }
+
+}
+#fadeOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 1;
+    @extend #transition;
+}
+
+
+#burger-menu {
+    height: 100vh;
+    width: $burgerMenuWidth;
+    float: left;
+    background-color: $burgerMenuColor;
+
+    .btn {
+        height: $burgerMenuWidth;
+        width: $burgerMenuWidth;
+        padding: 20%;
+        background-color: $burgerMenuColor;
+        border-radius: 0px;
+        display: block;
+
+        &:focus, &:active {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: $burgerMenuhover;
+        }
+
+
+        .bar {
+            width: 100%;
+            height: 5px;
+            margin-bottom: 5px;
+            background-color: white;
+            border-radius: 2px;
+        }
+    }
+}
+
+#sidebar {
+    height: 100vh;
+    width: 0px;
+    float: left;
+    left: 50px;
+    overflow: hidden;
+    position: absolute;
+    background: $slideBarColor;
+    z-index: 10;
+
+    @extend #transition;
+
+    .sidebar-nav {
+        position: absolute;
+        width: 250px;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+
+        li {
+            text-indent: 20px;
+            line-height: 40px;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $slideBarFontC;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $slideBarFontHover;
+                    background: $slideBarLiHover;
+                }
+
+                &:active, &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+
+            a {
+                color: $slideBarFontC;
+
+                &:hover {
+                    color: $slideBarFontHover;
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+#transition {
+    -webkit-transition: all $transitionTime ease;
+    -moz-transition: all $transitionTime ease;
+    -o-transition: all $transitionTime ease;
+    transition: all $transitionTime ease;
+}

@@ -1,0 +1,10 @@
+﻿extends layout
+
+block content
+	.genericWrapper
+		.panel.panel-default
+			.panel-heading
+				h1.panel-title= message
+			.panel-body
+				p= error.status
+				p #{error.stack}
