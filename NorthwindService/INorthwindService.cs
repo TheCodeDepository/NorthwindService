@@ -12,10 +12,8 @@ namespace NorthwindService
     [ServiceContract]
     public interface INorthwindService
     {
-
         [OperationContract]
-        List<string> GetNames(string cha);
-
+        List<string> GetNames();
 
         // TODO: Add your service operations here
     }

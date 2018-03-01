@@ -1,0 +1,37 @@
+﻿extends index
+
+block append scripts
+  script(src='/javascripts/home.js')
+  link(rel='stylesheet', href='/stylesheets/home.css')
+
+block content
+  .panel.panel-default
+    .panel-heading Customers
+    .panel-body
+      div(ng-controller="CustomerCtrl")
+        table
+          thead
+            th ID
+            th Name       
+            th Contract
+            th Contract Title
+            th Address
+            th City
+            th Region
+            th Postal Code
+            th Country
+            th Phone
+            th Fax
+          tbody
+            tr(ng-repeat="x in records")
+              td {{x.CustomerID}}
+              td {{x.CompanyName}}
+              td {{x.ContractName}}
+              td {{x.ContractTitle}}
+              td {{x.Address}}
+              td {{x.City}}
+              td {{x.Region}}
+              td {{x.PostalCode}}
+              td {{x.Country}}
+              td {{x.Phone}}
+              td {{x.Fax}}

@@ -30,8 +30,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="public\javascripts\app.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\javascripts\home.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="routes\home.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
+    <Compile Include="routes\api.js" />
+    <Content Include="public\images\background3.svg" />
+    <Content Include="public\stylesheets\home.css" />
+    <Content Include="public\stylesheets\home.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\stylesheets\home.css</DependentUpon>
+    </Content>
+    <Content Include="public\stylesheets\home.scss">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\home.pug">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <SubType>Content</SubType>
@@ -46,13 +65,12 @@
     <Content Include="public\stylesheets\main.scss" />
     <Content Include="README.md" />
     <Content Include="views\index.pug" />
-    <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
-    <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
+    <Folder Include="public\images\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />

@@ -6,6 +6,9 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using NorthwindContext;
+using System.IO;
+using Newtonsoft.Json;
+using System.Net.Mime;
 
 namespace NorthwindService
 {
@@ -13,11 +16,18 @@ namespace NorthwindService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class NorthwindService : INorthwindService
     {
-        public List<string> GetNames(string cha)
-        {            
+
+        public NorthwindService()
+        {
+            WebOperationContext.Current.OutgoingResponse.Format = WebMessageFormat.Json;
+        }
+
+        public List<string> GetNames()
+        {
             using (NorthwindEntities db = new NorthwindEntities())
             {
-                return db.Customers.Select(x => x.CustomerID).Where(c => c.Contains(cha)).ToList();
+                return db.Customers.Select(x => x.CustomerID).ToList();
+
             }
         }
 
