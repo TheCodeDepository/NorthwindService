@@ -1,10 +1,15 @@
 $sidebarWidth: 250px;
 
 $sidebarMargin: ($sidebarWidth - ($sidebarWidth*2));
-
 $burgerMenuColor: #2D103F;
 $burgerMenuWidth: 50px;
-$burgerMenuhover: #7b5793;
+
+$burgerMenuhover: #2D103F;
+$burgerBtnColor: #7b5793;
+
+
+$tabControlBackground: #c2acce;
+
 
 $slideBarFontC: #ffffff;
 $slideBarFontHover: #b5b5b5;
@@ -41,7 +46,16 @@ body
     @extend #transition;
 }
 
-
+#tabControl {
+    height: $burgerMenuWidth;
+    left: $burgerMenuWidth;
+    background-color: $tabControlBackground;
+    position: absolute;
+    width: auto;
+    right: 0px;
+    box-shadow: -1px 1px 5px #333333;
+    z-index: 8;
+}
 
 #page-content {
     background: $pageBackground;
@@ -52,8 +66,8 @@ body
     height: auto;
     bottom: 0px;
     right: 0px;
-    top: 0px;
-    padding: 20px;
+    top: $burgerMenuWidth;
+    
     @extend #transition;
   
   .panel {
@@ -75,7 +89,7 @@ body
     width: 100%;
     height: 100%;
     visibility: hidden;
-    z-index: 1;
+    z-index: 9;
     @extend #transition;
 }
 
@@ -85,16 +99,18 @@ body
     width: $burgerMenuWidth;
     float: left;
     background-color: $burgerMenuColor;
+    z-index: 10;
+    position: absolute;
 
     .btn {
         height: $burgerMenuWidth;
         width: $burgerMenuWidth;
         padding: 20%;
-        background-color: $burgerMenuColor;
+        background-color: $burgerBtnColor;
         border-radius: 0px;
         display: block;
 
-        &:focus, &:active {
+        &:active {
             outline: none;
         }
 
@@ -102,11 +118,18 @@ body
             background-color: $burgerMenuhover;
         }
 
-
-        .bar {
+        #bar {
             width: 100%;
             height: 5px;
             margin-bottom: 5px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        #bar.toggled {
+            width: 100%;
+            height: 5px;
+            margin-bottom: 3px;
             background-color: white;
             border-radius: 2px;
         }

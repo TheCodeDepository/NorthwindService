@@ -1,5 +1,18 @@
-﻿td {
-  width: auto;
-  padding: 5px;
-  border: 1px solid black; }
+﻿.contentDisplay {
+  background-color: white;
+  padding: 1%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: scroll; }
+  .contentDisplay .cHeader h1 {
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .contentDisplay .cBody td, .contentDisplay .cBody tr {
+    height: auto;
+    width: auto;
+    padding: 1px; }
 
