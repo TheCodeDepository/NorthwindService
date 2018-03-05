@@ -18,9 +18,9 @@ html
     #wrapper(ng-class="{'toggled' : toggle}")
       #burger-menu(ng-click='toggle = ! toggle')
         button.btn
-          #bar
-          #bar
-          #bar
+          #bar(ng-class="{'toggled' : toggle}")
+          #bar(ng-class="{'toggled' : toggle}")
+          #bar(ng-class="{'toggled' : toggle}")
       #sidebar
         ul.sidebar-nav
           li.sidebar-brand

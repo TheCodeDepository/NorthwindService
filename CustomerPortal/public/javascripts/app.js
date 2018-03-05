@@ -9,8 +9,8 @@ App.config(['$routeProvider', '$locationProvider',
         });
         $routeProvider
             .when('/', {
-                templateUrl: 'partials/index.pug',
-                controller: 'IndexCtrl'
+                templateUrl: 'partials/index.pug'
+                
             })
             .when("/customers", {
                 templateUrl: 'partials/customerPartial.pug',

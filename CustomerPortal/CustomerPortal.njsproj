@@ -36,6 +36,9 @@
     <Compile Include="public\javascripts\Controllers.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="public\javascripts\helpers.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="public\javascripts\scripts\angular-animate\angular-animate.js" />
     <Compile Include="public\javascripts\scripts\angular-animate\angular-animate.min.js" />
     <Compile Include="public\javascripts\scripts\angular-animate\index.js" />
@@ -340,12 +343,12 @@
     <Content Include="views\index.pug" />
     <Content Include="public\images\background3.svg" />
     <Content Include="views\partials\customerPartial.pug" />
-    <Content Include="public\stylesheets\home.css" />
-    <Content Include="public\stylesheets\home.min.css">
+    <Content Include="public\stylesheets\Customers.css" />
+    <Content Include="public\stylesheets\Customers.min.css">
       <SubType>Content</SubType>
-      <DependentUpon>public\stylesheets\home.css</DependentUpon>
+      <DependentUpon>public\stylesheets\Customers.css</DependentUpon>
     </Content>
-    <Content Include="public\stylesheets\home.scss">
+    <Content Include="public\stylesheets\Customers.scss">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\orders.pug">

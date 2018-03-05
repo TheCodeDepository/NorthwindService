@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NWP.WebApi.Models
+namespace NWP.WebApi.Models.ADO
 {
     using System;
     using System.Collections.Generic;

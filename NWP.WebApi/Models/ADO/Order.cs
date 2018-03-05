@@ -7,9 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NWP.WebApi.Models
+namespace NWP.WebApi.Models.ADO
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -35,15 +34,11 @@ namespace NWP.WebApi.Models
         public string ShipRegion { get; set; }
         public string ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
-
-        [JsonIgnore]
+    
         public virtual Customer Customer { get; set; }
-        [JsonIgnore]
         public virtual Employee Employee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
         public virtual ICollection<Order_Detail> Order_Details { get; set; }
-        [JsonIgnore]
         public virtual Shipper Shipper { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using NWP.WebApi.Models;
+using NWP.WebApi.Models.ADO;
 
 namespace NWP.WebApi.Controllers
 {

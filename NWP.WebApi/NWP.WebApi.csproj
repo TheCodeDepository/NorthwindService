@@ -197,52 +197,52 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs">
+    <Compile Include="Models\ADO\Category.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Customer.cs">
+    <Compile Include="Models\ADO\Customer.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomerDemographic.cs">
+    <Compile Include="Models\ADO\CustomerDemographic.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Employee.cs">
+    <Compile Include="Models\ADO\Employee.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\NorthwindContext.Context.cs">
+    <Compile Include="Models\ADO\NorthwindContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\NorthwindContext.cs">
+    <Compile Include="Models\ADO\NorthwindContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\NorthwindContext.Designer.cs">
+    <Compile Include="Models\ADO\NorthwindContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Order.cs">
+    <Compile Include="Models\ADO\Order.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Order_Detail.cs">
+    <Compile Include="Models\ADO\Order_Detail.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Product.cs">
+    <Compile Include="Models\ADO\Product.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Region.cs">
+    <Compile Include="Models\ADO\Region.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Shipper.cs">
+    <Compile Include="Models\ADO\Shipper.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Supplier.cs">
+    <Compile Include="Models\ADO\Supplier.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Territory.cs">
+    <Compile Include="Models\ADO\Territory.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -254,12 +254,12 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\NorthwindContext.Context.tt">
+    <Content Include="Models\ADO\NorthwindContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
       <LastGenOutput>NorthwindContext.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\NorthwindContext.tt">
+    <Content Include="Models\ADO\NorthwindContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
       <LastGenOutput>NorthwindContext.cs</LastGenOutput>
@@ -288,11 +288,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\NorthwindContext.edmx">
+    <EntityDeploy Include="Models\ADO\NorthwindContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NorthwindContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\NorthwindContext.edmx.diagram">
+    <Content Include="Models\ADO\NorthwindContext.edmx.diagram">
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
