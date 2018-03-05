@@ -1,6 +1,8 @@
 ﻿.contentDisplay {
   background-color: white;
   padding: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
   position: absolute;
   top: 0px;
   left: 0px;

@@ -1,0 +1,45 @@
+﻿.contentDisplay
+  .cHeader
+    h1 Customers    
+  .cBody
+    div
+      block scripts
+        link(rel='stylesheet', href='/stylesheets/home.css')
+      .table-responsive
+        table(st-table="records").table.table-striped
+          thead
+            tr
+              th(st-sort="Orders") Orders
+              th(st-sort="CustomerDemographics") Customer Demographics
+              th(st-sort="CustomerID") Customer ID
+              th(st-sort="CompanyName") Company Name
+              th(st-sort="ContactName") Contact Name
+              th(st-sort="ContactTitle") Contact Title
+              th(st-sort="Address") Address
+              th(st-sort="City") City
+              th(st-sort="Region") Region
+              th(st-sort="PostalCode") Postal Code
+              th(st-sort="Country") Country
+              th(st-sort="Phone") Phone
+              th(st-sort="Fax") Fax
+            //tr
+              //th(colspan='5')
+                //input.form-control(st-search='', placeholder='global search ...', type='text')
+          tbody
+            tr(ng-repeat='x in records')              
+              td {{x.Orders.length}}
+              td {{x.CustomerDemographics.length}}
+              td {{x.CustomerID}}
+              td {{x.CompanyName}}
+              td {{x.ContactName}}
+              td {{x.ContactTitle}}
+              td {{x.Address}}
+              td {{x.City}}
+              td {{x.Region}}
+              td {{x.PostalCode}}
+              td {{x.Country}}
+              td {{x.Phone}}
+              td {{x.Fax}}
+              //td
+                //button.btn.btn-sm.btn-danger(type='button', ng-click='removeItem(x)')
+                  //i.glyphicon.glyphicon-remove-circle

@@ -1,19 +1,23 @@
-﻿'use strict';
-var debug = require('debug');
+﻿
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var debug = require('debug');
 
+
+var routes = require('./routes/index');
+var api = require('./routes/api');
+var partials = require('./routes/partials');
 
 var app = express();
 
 // view engine setup
-
-app.set('views', path.join(__dirname, '/views'));
-
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
@@ -23,19 +27,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'node_modules')));
 
-
-/*
-    Routes
-            */
-var routes = require('./routes/index');
-var api = require('./routes/api');
-var home = require('./routes/home');
-
-
-app.use('/home', home);
 app.use('/', routes);
+app.use('/api', api);
+app.use('/partials', partials);
+
+// redirect all others to the index
+app.use('*', routes);
 
 
 // catch 404 and forward to error handler

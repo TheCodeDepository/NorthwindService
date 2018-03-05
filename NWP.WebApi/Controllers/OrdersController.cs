@@ -17,15 +17,9 @@ namespace NWP.WebApi.Controllers
         private NorthwindObjects db = new NorthwindObjects();
 
         // GET: api/Orders
-        public List<Order> GetOrders()
+        public IEnumerable<Order> GetOrders()
         {
-            var tmp = db.Orders.ToList();
-            var outPut = new List<Order>();
-            foreach (var item in tmp)
-            {
-                outPut.Add(item);
-            }
-            return outPut;
+            return db.Orders;
         }
 
         // GET: api/Orders/5

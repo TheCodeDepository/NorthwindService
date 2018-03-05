@@ -1,10 +1,6 @@
-﻿extends index
-
-block content
-	.genericWrapper
-		.panel.panel-default
-			.panel-heading
-				h1.panel-title= message
-			.panel-body
-				p= error.status
-				p #{error.stack}
+﻿.contentDisplay
+  .cHeader
+    h1= message
+  .cBody
+    p= error.status
+    p #{error.stack}

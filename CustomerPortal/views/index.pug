@@ -8,26 +8,30 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    script(src='/angular/angular.js')
+    script(src='/javascripts/scripts/angular/angular.js')
+    script(src='/javascripts/scripts/angular-route/angular-route.js')
+    script(src='/javascripts/scripts/angular-smart-table/dist/smart-table.js')
     script(src='/javascripts/app.js')
-    block scripts      
+    script(src='/javascripts/Controllers.js')
+    block scripts
   body(ng-app="App")
     #wrapper(ng-class="{'toggled' : toggle}")
       #burger-menu(ng-click='toggle = ! toggle')
         button.btn
-          .bar
-          .bar
-          .bar
+          #bar
+          #bar
+          #bar
       #sidebar
         ul.sidebar-nav
           li.sidebar-brand
-            a(href='/home') My Custom Sidebar
+            a(href='' ng-click='toggle = ! toggle') Northwind
           li
-            a(href='/home') Home
+            a(href='customers' ng-click='toggle = ! toggle') Home
           li
-            a(href='') Button
+            a(href='orders' ng-click='toggle = ! toggle') Orders
       canvas#fadeOverlay
       #tabControl  
       #page-content
-        block content
+        ng-view
+
           
