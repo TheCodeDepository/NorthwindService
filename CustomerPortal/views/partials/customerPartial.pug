@@ -22,7 +22,7 @@
               th Fax
             tr
               th
-                input.form-control(type="text" id="IDtb" ng-blur="getCustomersByID('IDtb')")
+                input.form-control(type="text" ng-model="customer")
               th
                 input.form-control(type="text" )
               th
@@ -44,7 +44,7 @@
               th
                 input.form-control(type="text")
           tbody
-            tr(ng-repeat='x in records')              
+            tr(ng-repeat='x in records | idFilter : customer')              
               td {{x.CustomerID}}
               td {{x.CompanyName}}
               td {{x.ContactName}}
