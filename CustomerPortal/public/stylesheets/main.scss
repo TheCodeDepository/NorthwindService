@@ -4,7 +4,7 @@ $sidebarMargin: ($sidebarWidth - ($sidebarWidth*2));
 $burgerMenuColor: #2D103F;
 $burgerMenuWidth: 50px;
 
-$burgerMenuhover: #2D103F;
+$burgerMenuhover: #6b4b81;
 $burgerBtnColor: #7b5793;
 
 
@@ -78,7 +78,8 @@ body
         left: 0px;
         right: 0px;
         bottom: 0px;
-        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
 
         .cHeader {
             h1 {
@@ -116,12 +117,21 @@ body
     position: absolute;
 
     .btn {
+        @extend #transition;
         height: $burgerMenuWidth;
         width: $burgerMenuWidth;
-        padding: 20%;
+        padding: 20% 20% 20% 20%;
         background-color: $burgerBtnColor;
         border-radius: 0px;
-        display: block;
+
+
+        #bar {
+            width: 100%;
+            height: 15%;
+            margin-bottom: 25%;
+            background-color: white;
+            border-radius: 2px;
+        }
 
         &:active {
             outline: none;
@@ -129,23 +139,15 @@ body
 
         &:hover {
             background-color: $burgerMenuhover;
+            padding: 15%;
         }
-
-        #bar {
-            width: 100%;
-            height: 5px;
-            margin-bottom: 5px;
-            background-color: white;
-            border-radius: 2px;
-        }
-
-        #bar.toggled {
+        /*#bar.toggled {
             width: 100%;
             height: 5px;
             margin-bottom: 3px;
             background-color: white;
             border-radius: 2px;
-        }
+        }*/
     }
 }
 

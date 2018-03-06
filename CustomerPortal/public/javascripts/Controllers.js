@@ -9,13 +9,15 @@
     });
 
     $scope.getCustomersByID = function (controlID) {
-        var id = document.getElementsByName(controlID).value;
+        var id = document.getElementById(controlID).value;      
         var customers = [];
         for (var i = 0; i < $scope.dataPool.length; i++) {
-            if ($scope.dataPool[i].CustomerID === id) {
-                $scope.records = $scope.dataPool[i];
+            var record = $scope.dataPool[i];
+            if (record.CustomerID === id) {
+                customers.push(record);
             }
-        }
+        }    
+        $scope.records = customers;
     };
 
 });

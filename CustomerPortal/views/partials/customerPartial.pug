@@ -4,8 +4,7 @@
   .cBody
     div
       block scripts
-        link(rel='stylesheet', href='/stylesheets/Customers.css')
-        script(src='/javascripts/helpers.js')
+        link(rel='stylesheet', href='/stylesheets/Customers.css')        
       .table-responsive
         table.table.table-striped
           thead
@@ -21,8 +20,29 @@
               th Country
               th Phone
               th Fax
-            tr   
-              
+            tr
+              th
+                input.form-control(type="text" id="IDtb" ng-blur="getCustomersByID('IDtb')")
+              th
+                input.form-control(type="text" )
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
+              th
+                input.form-control(type="text")
           tbody
             tr(ng-repeat='x in records')              
               td {{x.CustomerID}}
